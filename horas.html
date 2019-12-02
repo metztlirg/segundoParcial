@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculador de horas</title>
+	<script type="text/javascript">
+		var hora1=+prompt("Ingrese las horas 1: ");	
+		var min1=+prompt("Ingrese los minutos 1: ");
+		var seg1=+prompt("Ingrese los segundos 1: ");
+		var hora2=+prompt("Ingrese las horas 1: ");
+		var min2=+prompt("Ingrese los minutos 1: ");
+		var seg2=+prompt("Ingrese los segundos 1: ");
+
+		var h1=(hora1*3600)+(min1*60)+seg1;
+		var h2=(hora2*3600)+(min2*60)+seg2;
+
+		var tiempo=Math.abs(h1-h2);
+		var hora=0;
+		var min=0;
+		var seg=0;
+		if((tiempo/3600) >0) {
+		hora=Math.trunc(tiempo/3600);
+		tiempo=tiempo-(hora*3600);
+		}
+		if((tiempo/60) >0) {
+		min=Math.trunc(tiempo/60);
+		tiempo=tiempo-(min*60);
+		}
+		seg=tiempo;
+		alert("Han trascurrido " + hora+" horas, "+min+" minutos y "+seg+" segundos");
+
+
+	</script>
+	
+</head>
+<body>
+
+</body>
+</html>
